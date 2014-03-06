@@ -438,12 +438,10 @@ function! AutoPairsInit()
   if g:AutoPairsShortcutToggle != ''
     " use <expr> to ensure showing the status when toggle
     execute 'inoremap <buffer> <silent> <expr> '.g:AutoPairsShortcutToggle.' AutoPairsToggle()'
-    execute 'noremap <buffer> <silent> '.g:AutoPairsShortcutToggle.' :call AutoPairsToggle()<CR>'
   end
 
   if g:AutoPairsShortcutJump != ''
     execute 'inoremap <buffer> <silent> ' . g:AutoPairsShortcutJump. ' <ESC>:call AutoPairsJump()<CR>a'
-    execute 'noremap <buffer> <silent> ' . g:AutoPairsShortcutJump. ' :call AutoPairsJump()<CR>'
   end
 
 endfunction
